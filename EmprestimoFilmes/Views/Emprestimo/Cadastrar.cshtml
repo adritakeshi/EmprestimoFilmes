@@ -1,0 +1,33 @@
+﻿@model EmprestimosModel
+
+<div class="container bg-dark p-5 rounded-5">
+
+    <div class="mb-5 text-center text-light">
+        <h2> Cadastro de Aluguel de Filme </h2>
+    </div>
+
+    <form method="post" asp-controller="Emprestimo" asp-action="Cadastrar">
+
+        <div class="mb-3">
+                <label for="NomeCliente" class="form-label text-light">Nome do Cliente</label>
+            <input type="text" class="form-control" asp-for="NomeCliente" id="NomeCliente" placeholder="Nome da pessoa que está alugando o filme">
+        </div>
+
+        <div class="mb-3">
+                <label for="NomeFilmeEmprestimo" class="form-label text-light">Nome do Filme</label>
+            <input type="text" class="form-control" asp-for="NomeFilmeEmprestimo" id="NomeFilmeEmprestimo" placeholder="Filme que está sendo alugado">
+        </div>
+
+        <div class="mb-3">
+                <label for="Preco" class="form-label text-light">Preço</label>
+            <input type="text" class="form-control" asp-for="Preco" id="Preco" placeholder="Preço do aluguel do filme">
+        </div>
+
+         <div class="d-flex gap-5 mt-5">
+             <button type="submit" class="btn btn-success w-50">Salvar</button>
+             <a class="btn btn-primary w-50" asp-controller="Emprestimo" asp-action="Index">Voltar</a>
+         </div>
+
+    </form>
+
+</div>
